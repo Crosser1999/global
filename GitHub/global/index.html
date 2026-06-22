@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Global Language Center</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- EmailJS -->
+   
+    
+</head>
+<body>
+
+    <!-- ======================================== -->
+    <!-- POP-UP DE CAPTURA DE LEADS               -->
+    <!-- ======================================== -->
+    <div id="popupLead" class="popup-overlay">
+        <div class="popup-container">
+            <div class="popup-content">
+
+                <!-- Cabeçalho -->
+                <div class="popup-header">
+                    <div class="popup-logo">🌍</div>
+                    <h2>Global Language Center</h2>
+                    <p>Aprenda idiomas com excelência!</p>
+                </div>
+
+                <!-- Formulário -->
+                <form id="formLead">
+                    <!-- Campo: Nome -->
+                    <div class="campo">
+                        <label for="nome"><i class="fas fa-user"></i> Nome completo *</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+                    </div>
+
+                    <!-- Campo: Email -->
+                    <div class="campo">
+                        <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                        <input type="email" id="email" placeholder="exemplo@email.com" required />
+                    </div>
+
+                    <!-- Campo: Telefone -->
+                    <div class="campo">
+                        <label for="telefone"><i class="fas fa-phone"></i> Telefone/WhatsApp *</label>
+                        <input type="tel" id="telefone" placeholder="(11) 99999-9999" required />
+                    </div>
+
+                    <!-- Campo: Senha -->
+                    <div class="campo">
+                        <label for="senha"><i class="fas fa-lock"></i>  senha *</label>
+                        <input type="password" id="senha" placeholder="Mínimo 6 caracteres" required minlength="6" />
+                        <span class="helper">* Use esta senha para acessar nossa plataforma</span>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="campo checkbox">
+                        <input type="checkbox" id="newsletter" checked />
+                        <label for="newsletter">Quero receber novidades e dicas por email</label>
+                    </div>
+
+                    <!-- Botão Enviar -->
+                    <button type="submit" id="btnEnviar" class="btn-enviar">
+                        <i class="fas fa-paper-plane"></i> ENVIAR DADOS
+                    </button>
+
+                    <!-- Mensagem de feedback -->
+                    <div id="mensagem" class="mensagem"></div>
+
+                    <p class="popup-footer-text">
+                        Ao enviar, você concorda com nossa
+                        <a href="#politica">Política de Privacidade</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================== -->
+    <!-- CONTEÚDO PRINCIPAL DO SITE               -->
+    <!-- ======================================== -->
+    <div id="siteContent" style="display:none;">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Global Language</span>
+                </div>
+                <nav class="nav" id="navMenu">
+                    <a href="#home">Início</a>
+                    <a href="#cursos">Cursos</a>
+                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transforme seu futuro com <span>um novo idioma</span></h1>
+                    <p>Metodologia inovadora + Professores nativos = Resultados em até 6 meses</p>
+                    <div class="hero-buttons">
+                        <a href="#cursos" class="btn-primary"><i class="fas fa-rocket"></i> Conheça nossos cursos</a>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-secondary">
+                            <i class="fab fa-whatsapp"></i> Fale conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURSOS -->
+        <section id="cursos" class="cursos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos <span>Cursos</span></h2>
+                    <p>Escolha o idioma que vai transformar sua carreira</p>
+                </div>
+                <div class="cursos-grid">
+                    <div class="curso-card">
+                        <div class="curso-icon">🇬🇧</div>
+                        <h3>Inglês</h3>
+                        <p>Do básico ao avançado. Preparatório para IELTS e TOEFL.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 12 níveis</li>
+                            <li><i class="fas fa-check-circle"></i> Certificação internacional</li>
+                        </ul>
+                        <a href="#contato" class="btn-curso">Quero aprender</a>
+                    </div>
+                    <div class="curso-card">
+                        <div class="curso-icon">🇪🇸</div>
+                        <h3>Espanhol</h3>
+                        <p>Conversação fluente com foco em negócios e viagens.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 8 níveis</li>
+                            <li><i class="fas fa-check-circle"></i> Professores nativos</li>
+                        </ul>
+                        <a href="#contato" class="btn-curso">Quero aprender</a>
+                    </div>
+                    <div class="curso-card">
+                        <div class="curso-icon">🇫🇷</div>
+                        <h3>Francês</h3>
+                        <p>Da cultura à fluência. Prepare-se para o DALF/DELF.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 6 níveis</li>
+                            <li><i class="fas fa-check-circle"></i> Imersão cultural</li>
+                        </ul>
+                        <a href="#contato" class="btn-curso">Quero aprender</a>
+                    </div>
+                    <div class="curso-card">
+                        <div class="curso-icon">🇩🇪</div>
+                        <h3>Alemão</h3>
+                        <p>Níveis A1 ao C1 com foco em certificação Goethe.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 10 níveis</li>
+                            <li><i class="fas fa-check-circle"></i> Preparatório oficial</li>
+                        </ul>
+                        <a href="#contato" class="btn-curso">Quero aprender</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section id="diferenciais" class="diferenciais">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos <span>Diferenciais</span></h2>
+                    <p>Por que o Global Language Center é a melhor escolha</p>
+                </div>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Metodologia Exclusiva</h4>
+                        <p>Aprendizado acelerado com foco em conversação desde o primeiro dia.</p>
+                    </div>
+                    <div class="diferencial-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>Professores Nativos</h4>
+                        <p>Todos os professores são nativos com certificação internacional.</p>
+                    </div>
+                    <div class="diferencial-item">
+                        <i class="fas fa-award"></i>
+                        <h4>Certificação Internacional</h4>
+                        <p>Diplomas reconhecidos em mais de 50 países.</p>
+                    </div>
+                    <div class="diferencial-item">
+                        <i class="fas fa-laptop"></i>
+                        <h4>Plataforma Online</h4>
+                        <p>Acesso 24/7 à plataforma com materiais exclusivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section id="depoimentos" class="depoimentos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O que nossos <span>alunos dizem</span></h2>
+                </div>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <div class="depoimento-estrelas">⭐⭐⭐⭐⭐</div>
+                        <p>"Em 6 meses saí do zero ao avançado. A metodologia é incrível!"</p>
+                        <div class="depoimento-autor">
+                            <strong>Maria Santos</strong>
+                            <span>Aluna de Inglês</span>
+                        </div>
+                    </div>
+                    <div class="depoimento-card">
+                        <div class="depoimento-estrelas">⭐⭐⭐⭐⭐</div>
+                        <p>"Passei no IELTS com nota 8.0. Recomendo a todos!"</p>
+                        <div class="depoimento-autor">
+                            <strong>João Pereira</strong>
+                            <span>Aluno de Inglês</span>
+                        </div>
+                    </div>
+                    <div class="depoimento-card">
+                        <div class="depoimento-estrelas">⭐⭐⭐⭐⭐</div>
+                        <p>"Melhor escola de idiomas que já fiz. Professores fantásticos!"</p>
+                        <div class="depoimento-autor">
+                            <strong>Ana Costa</strong>
+                            <span>Aluna de Espanhol</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entre em <span>Contato</span></h2>
+                    <p>Fale com nossa equipe e comece sua jornada hoje!</p>
+                </div>
+                <div class="contato-grid">
+                    <div class="contato-info">
+                        <div class="contato-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - Bela Vista, SP</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contato@globallanguage.com</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/5511999999999" target="_blank">Clique aqui para falar</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato-social">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Global Language Center</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#politica">Política de Privacidade</a>
+                        <a href="#termos">Termos de Uso</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <p>&copy; 2026 Global Language Center. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- 2️⃣ DEPOIS: Seu script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
